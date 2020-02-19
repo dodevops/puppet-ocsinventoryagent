@@ -19,9 +19,6 @@ platforms:
     -   name: "centos-7"
         provisioner:
             name: "puppet_apply"
-    -   name: "redhat-8"
-        provisioner:
-            name: "puppet_apply"
     -   name: "debian-9"
         provisioner:
             name: "puppet_apply"
