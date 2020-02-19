@@ -1,0 +1,63 @@
+{
+  "name": "dodevops-ocsinventoryagent",
+  "version": "0.1.0",
+  "author": "Dennis Ploeger",
+  "summary": "Installs the OCS Inventory agent for linux",
+  "license": "MIT",
+  "source": "https://github.com/dodevops/puppet-ocsinventoryagent",
+  "project_page": "https://github.com/dodevops/puppet-ocsinventoryagent",
+  "issues_url": "https://github.com/dodevops/puppet-ocsinventoryagent/issues",
+  "dependencies": [
+    {
+      "name":"puppet-zypprepo",
+      "version_requirement":">= 2.2.2"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "18.04"
+      ]
+    },
+    {
+      "operatingsystem": "SLES",
+      "operatingsystemrelease": [
+        "15"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "pdk-version": "1.12.0",
+  "template-url": "pdk-default#1.12.0",
+  "template-ref": "1.12.0-0-g55d9ae2"
+}

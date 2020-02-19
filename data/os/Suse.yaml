@@ -1,0 +1,13 @@
+ocsinventoryagent::dependencies:
+    perl-XML-Simple:
+        ensure: "installed"
+    perl-Net-IP:
+        ensure: "installed"
+    perl-Net-SSLeay:
+        ensure: "installed"
+    perl-Crypt-SSLeay:
+        ensure: "installed"
+    perl-Net-SNMP:
+        ensure: "installed"
+    pciutils:
+        ensure: "installed"

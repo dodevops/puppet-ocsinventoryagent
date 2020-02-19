@@ -1,0 +1,23 @@
+ocsinventoryagent::dependencies:
+    perl-XML-Simple:
+        ensure: "installed"
+    perl-Compress-Zlib:
+        ensure: "installed"
+    perl-LWP-Protocol-https:
+        ensure: "installed"
+    perl-Digest-MD5:
+        ensure: "installed"
+    perl-Net-SSLeay:
+        ensure: "installed"
+    perl-Crypt-SSLeay:
+        ensure: "installed"
+    pciutils:
+        ensure: "installed"
+    smartmontools:
+        ensure: "installed"
+    dmidecode:
+        ensure: "installed"
+    pmtools:
+        ensure: "installed"
+    perl-Net-IP:
+        ensure: "installed"

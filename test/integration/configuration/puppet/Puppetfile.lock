@@ -1,0 +1,8 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    puppet-zypprepo (2.2.2)
+
+DEPENDENCIES
+  puppet-zypprepo (= 2.2.2)
+

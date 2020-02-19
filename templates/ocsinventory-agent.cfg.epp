@@ -1,0 +1,46 @@
+<% |
+  Enum['0', '1']  $daemon,
+  Enum['0', '1']  $debug,
+  Enum['0', '1']  $devlib,
+  Enum['0', '1']  $force,
+  Enum['0', '1']  $info,
+  Enum['0', '1']  $lazy,
+  String $local,
+  String $logfile,
+  String $password,
+  String $proxy,
+  String $realm,
+  String $server,
+  Enum['0', '1']  $stdout,
+  String $ocstag,
+  String $user,
+  String $wait,
+  Enum['0', '1']  $nosoftware,
+  String $delaytime,
+  String $backendcollecttimeout,
+  Enum['0', '1']  $scanhomedirs,
+  Enum['0', '1']  $ssl,
+  String $ca,
+| -%>
+daemon=<%= $daemon %>
+debug=<%= $debug %>
+devlib=<%= $devlib %>
+force=<%= $force %>
+info=<%= $info %>
+lazy=<%= $lazy %>
+local=<%= $local %>
+logfile=<%= $logfile %>
+password=<%= $password %>
+proxy=<%= $proxy %>
+realm=<%= $realm %>
+server=<%= $server %>
+stdout=<%= $stdout %>
+tag=<%= $ocstag %>
+user=<%= $user %>
+wait=<%= $wait %>
+nosoftware=<%= $nosoftware %>
+delaytime=<%= $delaytime %>
+backendCollectTimeout=<%= $backendcollecttimeout %>
+scanhomedirs=<%= $scanhomedirs %>
+ssl=<%= $ssl %>
+ca=<%= $ca %>

@@ -1,0 +1,7 @@
+ocsinventoryagent::repo_dependencies:
+    epel-release-7.noarch:
+        provider: "rpm"
+        source: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+    ocsinventory-release-latest.el7.ocs.noarch:
+        provider: "rpm"
+        source: "https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el7.ocs.noarch.rpm"

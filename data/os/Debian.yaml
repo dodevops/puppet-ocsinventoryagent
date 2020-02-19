@@ -1,0 +1,3 @@
+ocsinventoryagent::dependencies:
+    libcrypt-ssleay-perl:
+        ensure: "installed"
