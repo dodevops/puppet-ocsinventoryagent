@@ -82,7 +82,7 @@ class ocsinventoryagent (
     create_resources('package', $dependencies, {
       ensure => $ensure,
       before => Package[$package_name],
-      tag => ['dependencies']
+      tag    => ['dependencies']
     })
   }
 
