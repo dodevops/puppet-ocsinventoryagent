@@ -1,3 +1,4 @@
+# noinspection RubyResolve
 require 'spec_helper'
 
 describe 'ocsinventoryagent' do
@@ -6,18 +7,21 @@ describe 'ocsinventoryagent' do
       let(:facts) { os_facts }
 
       it { is_expected.to compile }
+      # noinspection RubyResolve
       it { is_expected.to contain_file('/etc/ocsinventory') }
-      it { is_expected.to contain_file('/etc/ocsinventory/ocsinventory-agent.cfg')}
+      # noinspection RubyResolve
+      it { is_expected.to contain_file('/etc/ocsinventory/ocsinventory-agent.cfg') }
 
       if os_facts[:os]['family'] == 'Suse'
         it { is_expected.to have_package_resource_count(7) }
+        # noinspection RubyResolve
         it { is_expected.to contain_zypprepo('ocsinventory-repo') }
       elsif os_facts[:os]['family'] == 'RedHat'
         it { is_expected.to have_package_resource_count(14) }
       elsif os_facts[:os]['family'] == 'Debian'
         it { is_expected.to have_package_resource_count(2) }
       else
-        fail(sprintf("OS-Family %s unkown", os_facts[:os]['family']))
+        raise 'OS-Family %s unkown' % os_facts[:os]['family']
       end
     end
   end

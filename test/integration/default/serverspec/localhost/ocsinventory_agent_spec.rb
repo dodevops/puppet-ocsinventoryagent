@@ -1,3 +1,4 @@
+# noinspection RubyResolve
 require 'spec_helper'
 
 # Check basic feature
@@ -10,11 +11,11 @@ describe 'After puppet' do
   describe file('/etc/ocsinventory/ocsinventory-agent.cfg') do
     it { is_expected.to exist }
     it { is_expected.to be_file }
-    its(:sha256sum) { should eq 'ce74caa56bdcef65458ee6a4af40ea03445216678c8aeef8a3fad514f1de5a81' }
+    its(:sha256sum) { is_expected.to eq 'ce74caa56bdcef65458ee6a4af40ea03445216678c8aeef8a3fad514f1de5a81' }
   end
 
   describe command('ocsinventory-agent --version') do
-    its(:exit_status) { should eq 0 }
+    its(:exit_status) { is_expected.to eq 0 }
   end
 
   if host_inventory['platform'] == 'debian'
