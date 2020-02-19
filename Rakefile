@@ -8,7 +8,7 @@ require 'kitchen/rake_tasks'
 
 def changelog_user
   return unless Rake.application.top_level_tasks.include? "changelog"
-  returnVal = nil || JSON.load(File.read('metadata.json'))['author']
+  returnVal = "dodevops" || JSON.load(File.read('metadata.json'))['author']
   raise "unable to find the changelog_user in .sync.yml, or the author in metadata.json" if returnVal.nil?
   puts "GitHubChangelogGenerator user:#{returnVal}"
   returnVal
@@ -16,7 +16,7 @@ end
 
 def changelog_project
   return unless Rake.application.top_level_tasks.include? "changelog"
-  returnVal = nil || JSON.load(File.read('metadata.json'))['source'].match(%r{.*/([^/]*)})[1]
+  returnVal = "https://github.com/dodevops/puppet-ocsinventoryagent" || JSON.load(File.read('metadata.json'))['source'].match(%r{.*/([^/]*)})[1]
   raise "unable to find the changelog_project in .sync.yml or the name in metadata.json" if returnVal.nil?
   puts "GitHubChangelogGenerator project:#{returnVal}"
   returnVal

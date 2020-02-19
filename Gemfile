@@ -32,6 +32,7 @@ group :development do
   gem "kitchen-puppet", '3.5.1',                                 require: false
   gem "serverspec", '2.41.5',                                    require: false
   gem "test-kitchen", '2.2.5',                                   require: false
+  gem "github_changelog_generator", '1.15.0',                    require: false
 end
 
 puppet_version = ENV['PUPPET_GEM_VERSION']

@@ -15,7 +15,11 @@ Gemfile:
               version: "2.41.5"
             - gem: "test-kitchen"
               version: "2.2.5"
+            - gem: "github_changelog_generator"
+              version: "1.15.0"
 Rakefile:
+    changelog_user: "dodevops"
+    changelog_project: "https://github.com/dodevops/puppet-ocsinventoryagent"
     requires:
         - "kitchen/rake_tasks"
     extras:
