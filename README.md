@@ -1,6 +1,6 @@
 # dodevops/ocsinventoryagent
 
-[![Build status](https://img.shields.io/travis/dodevops/puppet-ocsinventoryagent.svg)](https://travis-ci.org/dodevops/puppet-githubreleases)
+[![Build status](https://img.shields.io/travis/dodevops/puppet-ocsinventoryagent.svg)](https://travis-ci.org/dodevops/puppet-ocsinventoryagent)
 
 #### Table of Contents
 
