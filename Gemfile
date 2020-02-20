@@ -31,7 +31,7 @@ group :development do
   gem "kitchen-docker", '2.9.0',                                 require: false
   gem "kitchen-puppet", '3.5.1',                                 require: false
   gem "serverspec", '2.41.5',                                    require: false
-  gem "test-kitchen", '2.2.5',                                   require: false
+  gem "test-kitchen", '2.3.4',                                   require: false
   gem "github_changelog_generator", '1.15.0',                    require: false
 end
 

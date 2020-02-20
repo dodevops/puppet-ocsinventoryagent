@@ -14,7 +14,7 @@ Gemfile:
             - gem: "serverspec"
               version: "2.41.5"
             - gem: "test-kitchen"
-              version: "2.2.5"
+              version: "2.3.4"
             - gem: "github_changelog_generator"
               version: "1.15.0"
 Rakefile:

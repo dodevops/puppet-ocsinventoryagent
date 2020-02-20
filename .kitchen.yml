@@ -8,6 +8,13 @@ provisioner:
     name: "puppet_apply"
     manifest: "site.pp"
     puppet_debug: true
+    puppet_detailed_exitcodes: true
+    puppet_whitelist_exit_code:
+        - 0
+    retry_on_exit_code:
+        - 2
+    max_retries: 2
+    wait_for_retry: 5
     ignored_paths_from_root:
         - "spec"
         - "vendor"
