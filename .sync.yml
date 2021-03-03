@@ -19,7 +19,7 @@ Gemfile:
               version: "1.15.0"
 Rakefile:
     changelog_user: "dodevops"
-    changelog_project: "https://github.com/dodevops/puppet-ocsinventoryagent"
+    changelog_project: "puppet-ocsinventoryagent"
     requires:
         - "kitchen/rake_tasks"
     extras:
