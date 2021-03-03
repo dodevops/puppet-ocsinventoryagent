@@ -5,6 +5,7 @@ describe 'ocsinventoryagent' do
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }
+      let(:params) { { 'zypper_repo_url' => 'https://example.com' } }
 
       it { is_expected.to compile }
       # noinspection RubyResolve

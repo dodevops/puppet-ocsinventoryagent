@@ -56,7 +56,7 @@ class ocsinventoryagent (
   Optional[Hash] $dependencies      = undef,
   Optional[String] $zypper_repo_url = undef,
 ) {
-  if ($facts['os']['family'] == 'Suse') {
+  if ($facts['os']['family'] == 'Suse' and $zypper_repo_url) {
     zypprepo { 'ocsinventory-repo':
       baseurl      => $zypper_repo_url,
       enabled      => 1,

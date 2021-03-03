@@ -8,6 +8,7 @@ before_install:
   - gem update --system $RUBYGEMS_VERSION
   - gem --version
   - bundle -v
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 script:
   - 'bundle exec rake $CHECK'
 bundler_args: --without system_tests
@@ -57,3 +58,7 @@ deploy:
     tags: true
     all_branches: true
     condition: "$DEPLOY_TO_FORGE = yes"
+env:
+  global:
+    - DOCKER_USERNAME=dodevopsdocker
+    - secure: "BICZFuIFHECl1h8ilXbEo4Mt24H5Qt/r6U/DzBYYCpz+ktb+gcF+YZoalQ96+XImXMcBpOH1xEhX+N2wZkxjbyY3sUDOTA/j2fqdW1BQ5vJaYFs13vCxVE/GuGKCdQZ1FCWMBPw6B7ugeN6JBm3MWJGdB1dBcpgAmHxpZbvEFxjNM4Fnjh589cUrmiaZwadrdQoSPjw91giRFB9h7gGEEkEwyTGlDG53jYozTD+eKox0OPKxrvTNQbCN15kvv5KZsZoij2MikhFhMoMsmgCoaVCAj0tl5YFQYvaqHkA16PcINMehap3TctOGpH0MzBHzc/tE7dr7SAUMgfwUmMkJ4aNQAO/PnI5TK0USCOF4uClg/5g2DrqCq1YZJeyVzWjkTmmj+eAz84MSjZNszaYC+6O6L0omVFVKFEKShCsZzAqt/4Ygk/wGVJdjO7nffdOG7tAull64oq+3pF1aXNFgHoWIIIxOsmEgO9co2F9fBwjWF7nA3itWBiMFOU2HlF68Ks8mpzMLdPsQCYP/S7/rwmR0r2dSqcRWNctlcbF2Tq2QI+of+49+2DNyzMyDCzD0AaMcTTk4agwjKZuIUFfDb9Lej2A2dhu/Swk5nhY4sGjGnO3YCJsmWGazWlQ4vfRnPDg48MEuqn5/68KHKuJ4PiMXlnQ6yYm1GcqgGcH8yrc="
