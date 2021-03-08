@@ -1,0 +1,13 @@
+lookup_options:
+    ocsinventoryagent::dependencies:
+        merge: hash
+
+ocsinventoryagent::dependencies:
+    perl-Data-UUID:
+        ensure: "installed"
+    perl-Proc-Daemon:
+        ensure: "installed"
+    perl-Proc-ProcessTable:
+        ensure: "installed"
+    perl-Proc-Simple:
+        ensure: "installed"

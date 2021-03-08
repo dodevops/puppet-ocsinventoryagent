@@ -1,3 +1,7 @@
+lookup_options:
+    ocsinventoryagent::dependencies:
+        merge: hash
+
 ocsinventoryagent::dependencies:
     perl-XML-Simple:
         ensure: "installed"
@@ -10,12 +14,4 @@ ocsinventoryagent::dependencies:
     perl-Net-SNMP:
         ensure: "installed"
     pciutils:
-        ensure: "installed"
-    perl-Data-UUID:
-        ensure: "installed"
-    perl-Proc-Daemon:
-        ensure: "installed"
-    perl-Proc-ProcessTable:
-        ensure: "installed"
-    perl-Proc-Simple:
         ensure: "installed"
