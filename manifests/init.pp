@@ -70,7 +70,7 @@ class ocsinventoryagent (
     }
   }
 
-  Package <| tag == 'repo_dependenceis' |> -> Package<| tag == 'dependencies' |>
+  Package <| tag == 'repo_dependencies' |> -> Package<| tag == 'dependencies' |>
 
   if ($repo_dependencies) {
     create_resources('package', $repo_dependencies, {
