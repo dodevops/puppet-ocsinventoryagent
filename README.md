@@ -13,6 +13,14 @@ This puppet module installs and configures the linux agent for [OCS-Inventory](h
 
 ## Requirements
 
+### Package repo for non Debian based operating systems
+
+You need to care for the ocsinventory-agent package repository by yourself on non Debian based operating systems.
+
+On Debian based operating systems, the pacakge is part of the repositories.
+
+### SLES requirements
+
 On SLES (only SLES 15 tested so far) the "Desktop Applications" and the "Development Tools" software modules need to be
 activated in order for dependencies to be available. Some of the dependencies are not available in the the software
 pools for SLES and need to be provided separatly. Recommended is the opensuse software portal 
@@ -25,6 +33,23 @@ The affected packages in detail are:
 * perl-Proc-Daemon
 * perl-Proc-ProcessTable
 * perl-Proc-Simple
+
+### Sysconfig file
+
+The packages for non Debian based operating systems are very fragmented. For RedHat/Centos there are packages in EPEL 
+but also on the repo of the OCS inventory project itself, both are structured very different. Also for SLES you can find
+many different packages in the OpenSUSE build service.
+
+Nearly all (exception is f.e. the EPEL package) of those packages have in common, that you have to configure a sysconfig
+file in order for the agent (or to be specific: its cronjob) to do something. Some of them provide templates for it, some
+not. And the config flags in those differ. So please take care about the sysconfig file on your own, if required.
+
+### CA
+
+If your OCS server has the complete chain (root CA, intermediate, certificate), your agent should work without a CA set.
+However if you don't configure the root CA on your OCS server, you need to provide the root CA on the agent. If your 
+server uses a certificate signed by a usual CA, the CA bundle of the specific OS has proven to work fine. You can spot
+that something is wrong with your CA setup if your agent looks for a CAcert.pem file in its /var directory and cant find it.
 
 ## Usage
 

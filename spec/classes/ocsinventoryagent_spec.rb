@@ -18,7 +18,7 @@ describe 'ocsinventoryagent' do
         # noinspection RubyResolve
         it { is_expected.to contain_zypprepo('ocsinventory-repo') }
       elsif os_facts[:os]['family'] == 'RedHat'
-        it { is_expected.to have_package_resource_count(14) }
+        it { is_expected.to have_package_resource_count(13) }
       elsif os_facts[:os]['family'] == 'Debian'
         it { is_expected.to have_package_resource_count(2) }
       else
