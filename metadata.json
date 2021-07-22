@@ -1,6 +1,6 @@
 {
   "name": "dodevops-ocsinventoryagent",
-  "version": "0.4.2",
+  "version": "1.0.0",
   "author": "Dennis Ploeger",
   "summary": "Installs the OCS Inventory agent for linux",
   "license": "MIT",

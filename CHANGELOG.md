@@ -2,13 +2,18 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [v0.4.2](https://github.com/dodevops/puppet-ocsinventoryagent/tree/v0.4.2) (2021-07-20)
+## [v1.0.0](https://github.com/dodevops/puppet-ocsinventoryagent/tree/v1.0.0) (2021-07-22)
 
-[Full Changelog](https://github.com/dodevops/puppet-ocsinventoryagent/compare/v0.4.1...v0.4.2)
+[Full Changelog](https://github.com/dodevops/puppet-ocsinventoryagent/compare/v0.4.2...v1.0.0)
 
 ### Fixed
 
+- Fixing os family Suse and RedHat [\#5](https://github.com/dodevops/puppet-ocsinventoryagent/pull/5) ([timdeluxe](https://github.com/timdeluxe))
 - fix: Fixing typo regarding dependencies [\#4](https://github.com/dodevops/puppet-ocsinventoryagent/pull/4) ([timdeluxe](https://github.com/timdeluxe))
+
+## [v0.4.2](https://github.com/dodevops/puppet-ocsinventoryagent/tree/v0.4.2) (2021-07-20)
+
+[Full Changelog](https://github.com/dodevops/puppet-ocsinventoryagent/compare/v0.4.1...v0.4.2)
 
 ## [v0.4.1](https://github.com/dodevops/puppet-ocsinventoryagent/tree/v0.4.1) (2021-03-08)
 
