@@ -13,6 +13,16 @@ This puppet module installs and configures the linux agent for [OCS-Inventory](h
 
 ## Requirements
 
+### Package repo for non Debian based operating systems
+
+You need to care for the ocsinventory-agent package repository by yourself on non Debian based operating systems. For RHEL/CentOS the repo
+https://rpm.ocsinventory-ng.org/ might fit your needs. For SLES you might find suitable packages in the OpenSUSE build service, which you 
+either then install by adding those remote repos or host a repo containing them on your own.
+
+On Debian based operating systems, the pacakge is part of the repositories.
+
+### SLES requirements
+
 On SLES (only SLES 15 tested so far) the "Desktop Applications" and the "Development Tools" software modules need to be
 activated in order for dependencies to be available. Some of the dependencies are not available in the the software
 pools for SLES and need to be provided separatly. Recommended is the opensuse software portal 
