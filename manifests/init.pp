@@ -137,13 +137,4 @@ class ocsinventoryagent (
         }
       )
   }
-
-  if ($facts['os']['family'] == 'Suse' or $facts['os']['family'] == 'RedHat') {
-    file {
-      '/etc/sysconfig/ocsinventory-agent':
-        ensure => $_fileensure,
-        source => "puppet:///modules/${module_name}/sysconfig/ocsinventory-agent",
-        before => File['/etc/ocsinventory/ocsinventory-agent.cfg'],
-    }
-  }
 }

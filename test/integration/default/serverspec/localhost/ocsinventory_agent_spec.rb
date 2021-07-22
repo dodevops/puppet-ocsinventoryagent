@@ -23,15 +23,5 @@ describe 'After puppet' do
       it { is_expected.to exist }
       it { is_expected.to be_file }
     end
-  elsif host_inventory['platform'] == 'redhat'
-    describe file('/etc/cron.hourly/ocsinventory-agent') do
-      it { is_expected.to exist }
-      it { is_expected.to be_file }
-    end
-  else
-    describe file('/etc/cron.daily/ocsinventory-agent') do
-      it { is_expected.to exist }
-      it { is_expected.to be_file }
-    end
   end
 end
